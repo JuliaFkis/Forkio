@@ -1,0 +1,320 @@
+.pricing {
+
+    padding-top: 14px;
+    background: url("../images/base.png");
+    background-size: cover;
+
+    &__headlight {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 42px;
+        text-align: center;
+        color: #FFFFFF;
+        background: none;
+        margin-bottom: 32px;
+    }
+
+    &__card {
+        margin: 0 31px;
+        background: rgba(219, 169, 169, 0.11);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 18px;
+        
+
+        &-headlight {
+            font-size: 24px;
+            line-height: 24px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 100%;
+            padding-top: 36px;
+            padding-bottom: 36px;
+            background: rgba(255, 255, 255, .06);
+            text-align: center;
+            margin-bottom: 66px;
+        }
+
+    }
+
+    &__text-price {
+        font-size: 60px;
+        line-height: 62px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+    }
+
+    &__text-clarification {
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 73px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 5px;
+            background: #8D81AC;
+            position: relative;
+            top: 38px;
+            margin: 0 auto;
+        }
+    }
+
+    &__text-description {
+        font-size: 16px;
+        line-height: 28px;
+        color: #FFFFFF;
+        margin-bottom: 37px;
+        display: flex;
+        text-align: center;
+
+        &:nth-of-type(3) {
+            line-height: 32px;
+        }
+    }
+
+    &__purchase-btn {
+        width: 163px;
+        height: 45px;
+        border-width: 0;
+        border-radius: 40px;
+        background: rgba(255, 255, 255, .15);
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0px 5px 39px 5px;
+    }
+}
+
+.active-card {
+    margin: 0 11px;
+    background: #463048D9;
+    margin-bottom: 18px;
+
+    &-headlight {
+        background: rgba(0, 0, 0, .11);
+        margin-bottom: 57px;
+    }
+
+    &-price {
+        font-size: 82px;
+        line-height: 84px;
+    }
+
+   &-btn {
+    width: 190px;
+    height: 52px;
+        margin-bottom: 47px;
+    }
+}
+
+.bell {
+    position: relative;
+    top: 3px;
+}
+
+@media (min-width: 480px) {
+    .pricing-cards-wrapper {
+      display: grid;
+      grid-template-columns: 40vw 35vw;
+      gap: 30px 25px
+    }
+
+    .pricing {
+
+        padding-top: 88px;
+        @include flex-center;
+        flex-direction: column;
+        align-items: center;
+
+        background: url("../images/base-tablet.png");
+        background-size: cover;
+    
+        &__headlight {
+            font-size: 42px;
+            line-height: 44px;
+            margin-bottom: 39px;
+        }
+    
+        &__card {
+
+            &:first-of-type {
+                margin-left: 5vw;
+                width: 35vw;
+
+                .pricing__text-description {
+                    margin-bottom: 68px;
+                }
+            }
+
+            &-headlight {
+                font-size: 24px;
+                line-height: 24px;
+                padding: 43px 0;
+            }
+                       
+            display: flex;
+            margin: 0 0;
+            width: 100%;
+    
+        }
+    
+        &__text-price {
+            font-size: 60px;
+            line-height: 90px;
+            margin-bottom: 20px;
+        }
+    
+        &__text-description {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    
+        &__purchase-btn {
+            margin-bottom: 39px;
+        }
+    }
+    
+    .active-card {
+
+        &-headlight{
+            background: rgba(0, 0, 0, .11);
+            margin-bottom: 57px;
+        }
+
+        &-price {
+            font-size: 82px;
+            line-height: 90px;
+            margin-bottom: 16px;
+        }
+
+        &-clarification {
+            margin-bottom: 91px;
+        }
+
+        &-description {
+            margin-bottom: 83px;
+        }
+
+        &-btn {
+            width: 190px;
+            height: 52px;
+            margin-bottom: 47px;
+        }
+
+
+        &-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 10px;
+        }
+
+        margin: 0 0 0 0;
+        background: #463048D9;
+        margin-bottom: 94px;
+        
+
+    }
+
+    .last-item {
+        margin-top: 41px;
+        margin-bottom: 153px;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .pricing > .content-wrapper {
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pricing-cards-wrapper {
+        display: flex;
+        gap: 0 15px;
+      }
+  
+      .pricing {
+
+          @include flex-center;
+          flex-direction: column;
+          align-items: center;
+          padding-top: 112px;
+  
+          background: url("../images/base-tablet.png");
+          background-size: cover;
+      
+          &__headlight {
+              font-size: 42px;
+              line-height: 44px;
+              margin-bottom: 39px;
+          }
+      
+          &__card {
+  
+              &:first-of-type {
+                  margin-left: 0;
+                  width: 100%;
+              }
+                         
+              display: flex;
+              margin-top: 41px;
+              margin-bottom: 153px;
+          }
+      }
+      
+      .active-card {
+  
+          &-headlight{
+              background: rgba(0, 0, 0, .11);
+              margin-bottom: 57px;
+          }
+  
+          &-price {
+              font-size: 82px;
+              line-height: 90px;
+              margin-bottom: 16px;
+          }
+  
+          &-clarification {
+              margin-bottom: 91px;
+          }
+  
+          &-description {
+              margin-bottom: 83px;
+          }
+  
+          &-btn {
+              width: 190px;
+              height: 52px;
+              margin-bottom: 47px;
+          }
+  
+  
+          &-wrapper {
+              display: flex;
+              flex-wrap: wrap;
+              margin: 0 10px;
+          }
+  
+          margin: 0 0 0 0;
+          background: #463048D9;
+          margin-bottom: 94px;
+          width: 116%;
+      }
+}
+
+@media (min-width: 1200px) {
+
+    .pricing > .content-wrapper {
+        width: 1200px;
+        min-width: unset;
+        max-width: unset;
+    }
+}

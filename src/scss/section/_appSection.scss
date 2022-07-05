@@ -1,0 +1,76 @@
+@import "mixins";
+@import "variables";
+
+
+.app__block{
+    margin: $center;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    .app__title{
+        @include font($fontFamilyMonts, bold, $color-text, 48px, 48px);
+        text-align: $text-center;
+        padding-top: 50px;
+        padding-bottom: 19px;
+    }
+    .app__text{
+        @include font($fontFamilyMonts, 400, $color-button, 18px, 24px);
+        text-align: $text-center;
+        padding-bottom: 19px;
+     
+    }
+    .app__text-version{
+        @include font($fontFamilyMonts, 400, #848E97, 14px, 14px);
+        text-align: $text-center;
+      
+    }
+}
+
+.app__bg{
+    background-image: url("../images/background-img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 718px;
+}
+
+.app__trial-text{
+    @include font($fontFamilyMonts, normal, #848E97, 14px, 14px);
+    text-align: $text-center;
+
+}
+
+@media (min-width: 480px){
+    .app__title{
+        font-size: 72px;
+        line-height: 72px;
+        padding-top: 68px;
+    }
+    .app__text{
+        @include font($fontFamilyLato, 400, #848E97, 24px, 24px);
+
+    }
+
+    .app__title{
+        padding-top: 69px;
+    }
+
+   
+}
+
+@media (min-width: 993px){
+    .app__title{
+        font-size: 82px;
+        line-height: 82px;
+        padding-top: 100px;
+    }
+    .app__text{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .app__text-version{
+        font-size: 16px;
+        line-height: 16px;
+    }
+        
+}

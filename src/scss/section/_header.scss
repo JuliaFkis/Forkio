@@ -1,0 +1,171 @@
+@import "mixins";
+@import "variables";
+
+.header{
+    height: 103px;
+    border: 1px solid black;
+    background-color:#27262A;
+}
+
+.header__wraper{
+    @include flex(space-between);
+}
+
+.header__img-logo{
+   margin-top: 32px;
+   margin-left: 16px;
+}
+
+.header__text-logo{
+    display: none;
+}
+
+.header__decktop-nav{
+    display: none;
+}
+
+.header__mob-nav{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    top: 265px;
+    margin: $center;
+    margin-top: 27px;
+    display:block;
+}
+.header__mob-nav-lists{
+    @include font($fontFamilyMonts, 400, $color-text, 27px, 36px);
+    background-color: #333;
+    width: 290px;
+
+    .header__mobile-item{
+        padding-left: 26px;
+        padding-top: 26px;
+        padding-bottom: 21px;
+        border: 2px solid #3D3D3D;
+    }
+
+    .header__mobile-link:hover{
+        color: $color-button;
+    }
+         
+    .header__mobile-link::before{
+        content: "";
+        width: 8px;
+        height: 53px;
+        background-color: $color-button;
+        position: absolute;
+        left: 0%;
+        top: 4%
+    }
+    //место вырывания волос. псевдоэлемент не показывается по ховеру.
+
+}
+
+.header__mob-open-menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+@media (min-width: 480px){
+    .header{
+        height: 118px;
+    }
+    .header__logo{
+        @include flex(space-between);
+        text-decoration: none;
+
+        .header__img-logo{
+            margin-top: 22px;
+            margin-right: 17px;
+            height: 43px;
+        }
+
+        .header__text-logo{
+            display: block;
+            @include font($fontFamilyLato, 700, $color-button, 24px, 16px);
+            text-transform: uppercase;
+            margin-top: 37px;
+        }
+    }
+    .header__button{
+        margin-top: 24px;
+        margin-right: 20px;
+    }
+   
+    .header__decktop-nav{
+        display: block;
+    }
+    .header__decktop-nav-lists{
+        @include flex(center);
+        margin: $center;
+        margin-top: 20px;
+        margin-bottom: 18px;
+        .header__decktop-nav-list{
+            @include font($fontFamilyMonts, 700, $color-button, 16px, 18px); 
+            margin-right: 24px;
+            margin-left: 24px;
+        }
+    }
+
+}
+
+@media (min-width: 993px){
+    .header{
+        background-color: black;
+    }
+   
+    .header__decktop-nav{
+        display: block;
+        margin-top: -27px;
+    
+    
+        .header__decktop-nav-lists{
+            @include flex($center);
+            margin-top: 0px;
+            right: 600px;
+            top: -30px;
+
+            .header__decktop-nav-list{
+                @include font($fontFamilyMonts, bold, $color-button, 16px, 15px); 
+              
+            }
+        }
+    }
+
+    .header__logo{
+        @include flex(space-between);
+        text-decoration: none;
+
+        .header__img-logo{
+            margin-top: 22px;
+            margin-right: 17px;
+        }
+
+        .header__text-logo{
+            display: block;
+            @include font($fontFamilyLato, 700, $color-button, 24px, 16px);
+            text-transform: uppercase;
+            margin-top: 37px;
+        }
+    }
+}
+
+
+@media(min-width: 1200px){
+    .header{
+        background-color: black;
+    }
+    .header__decktop-nav-lists{
+        @include flex($center);
+
+        top: -300px;
+    }
+    .header__decktop-nav-lists{
+        margin-top: 15px;
+    }
+
+}

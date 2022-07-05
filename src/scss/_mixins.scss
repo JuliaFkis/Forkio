@@ -1,0 +1,50 @@
+@import "variables";
+
+
+@mixin font ($fontFamily, $fontWeight, $color, $fontSize, $lineHeight) {
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+    color: $color;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+}
+
+@mixin purchase ($width, $height, $borderRadius) {
+    width: $width;
+    height: height;
+    background-color: rgba($color: #ffffff, $alpha: 1.0);
+    border-radius: $borderRadius;
+}
+
+@mixin button ($width, $height){
+    background-color: $color-button;
+    width: $width;
+    height: $height;
+    border-radius: 40px;
+    border: none; 
+    outline: none;
+}
+
+@mixin block ( $height:0, $width:0) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($justify-content) {
+    display: flex;
+    justify-content: $justify-content;
+}
+
+@mixin button-with-counter {
+    border-radius: 6px;
+    padding: 3px 12px;
+    font-size: 12px;
+    line-height: 20px;
+    border: 1px solid rgba(27,31,36,0.15);
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    
+}
